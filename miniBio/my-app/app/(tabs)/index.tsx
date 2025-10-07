@@ -1,32 +1,32 @@
 import { Image } from 'expo-image';
 import { StyleSheet } from 'react-native';
 
-// Importe seus componentes personalizados (se necessário)
+
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 
-// 🚨 SUBSTITUA ESSAS TRÊS LINHAS PELAS SUAS INFORMAÇÕES!
-const MY_NAME = 'SEU NOME COMPLETO AQUI'; 
-const MY_BIO = 'Sua mini biografia de um parágrafo. Fale sobre seus interesses, o que você estuda ou o que te motiva no mundo da programação.';
-const MY_PHOTO_URL = 'https://picsum.photos/seed/seunome/300/300'; // Substitua por uma URL da sua foto (ou use uma imagem local)
+
+const MY_NAME = 'Lucas Ribeiro D Azevedo'; 
+const MY_BIO = 'Sou Lucas Ribeiro D’Azevedo, estudante de Ciência da Computação com experiência em Python, Java, C e SQL. Participei de projetos acadêmicos envolvendo compiladores, energia limpa e tecnologia assistiva com Arduino. Tenho grande interesse em inovação e inclusão.';
+
 
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      // Você pode ajustar a cor do cabeçalho se quiser
+      
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
       headerImage={
         <ThemedView style={styles.imageContainer}>
           <Image
-            source={{ uri: MY_PHOTO_URL }} 
+            source={require('@/assets/images/Screenshot.png')} 
             style={styles.profilePicture}
             contentFit="cover"
           />
         </ThemedView>
       }>
       
-      {/* Container Principal com o Nome */}
+      
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title" style={styles.nameText}>
           {MY_NAME}
@@ -36,22 +36,9 @@ export default function HomeScreen() {
       {/* Seção da Mini Bio */}
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Mini Biografia</ThemedText>
+        {/* Usando a constante MY_BIO no ThemedText */}
         <ThemedText>
           {MY_BIO}
-        </ThemedText>
-      </ThemedView>
-
-      {/* Instruções de Entrega (Opcional, mas útil) */}
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Próximos Passos</ThemedText>
-        <ThemedText>
-          1. Substitua as constantes **MY_NAME, MY_BIO e MY_PHOTO_URL** acima.
-        </ThemedText>
-        <ThemedText>
-          2. Publique no **GitHub** (`git push`).
-        </ThemedText>
-        <ThemedText>
-          3. Publique no **Expo** (`npx expo publish`) para gerar o link do App.
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
@@ -62,7 +49,6 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   titleContainer: {
-    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 15,
@@ -74,23 +60,23 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   imageContainer: {
-    // Alinha a imagem no centro do cabeçalho Parallax
+    
     flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'center',
-    paddingBottom: 20, // Espaçamento entre a foto e o conteúdo
+    paddingBottom: 20,
   },
   profilePicture: {
     height: 150,
     width: 150,
-    borderRadius: 75, // Deixa a imagem perfeitamente circular
+    borderRadius: 75, 
     borderWidth: 3,
-    borderColor: 'white', // Adiciona uma borda branca
+    borderColor: 'white', 
   },
   nameText: {
     fontSize: 32, 
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#007AFF', // Cor de destaque
+    color: '#007AFF',
   },
 });
