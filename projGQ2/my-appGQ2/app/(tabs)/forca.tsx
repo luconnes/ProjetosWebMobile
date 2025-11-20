@@ -68,8 +68,6 @@ export default function Forca(): JSX.Element {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Jogo da Forca</Text>
-
-      
       <View style={styles.wordDisplay}>
         {palavraSecreta.split("").map((letra: string, i: number) => (
           <Text key={i} style={styles.letterSpace}>
@@ -77,21 +75,10 @@ export default function Forca(): JSX.Element {
           </Text>
         ))}
       </View>
-
-      
-      <View style={styles.hangmanArea}>
-          
-          <Text style={{ fontSize: 32, color: 'gray' }}> 
-            [FORCA - {letrasErradas.length}/{maxErros}] 
-          </Text>
-      </View>
-
       
       <Text style={styles.infoText}>
         Tentativas restantes: {maxErros - letrasErradas.length}
       </Text>
-      
-      
       <View style={styles.inputArea}>
         <TextInput
           style={styles.textInput}
@@ -109,16 +96,12 @@ export default function Forca(): JSX.Element {
             disabled={gameOver || venceu}
         />
       </View>
-
-      
       <Text style={styles.infoText}>
         Letras erradas: 
         {letrasErradas.map((l: string, i: number) => (
           <Text key={i} style={styles.wrongLetter}> {l} </Text> 
         ))}
       </Text>
-
-      
       {(gameOver || venceu) && (
         <View style={styles.endGameArea}>
           {venceu 
@@ -155,9 +138,9 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap', 
     },
     letterSpace: {
-        fontSize: 28, // Reduzido de 30 para 28
+        fontSize: 28, 
         fontWeight: 'bold',
-        marginHorizontal: 2, // Reduzido de 3 para 2 (Ajuste crucial para largura)
+        marginHorizontal: 2, 
         borderBottomWidth: 3,
         borderColor: '#fff', 
         paddingHorizontal: 5, 
@@ -192,16 +175,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textDecorationLine: 'line-through',
     },
-    hangmanArea: {
-        height: 180, 
-        width: '100%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginBottom: 15, 
-        marginTop: 10,
-        backgroundColor: '#4470b8', 
-        borderRadius: 10,
-    },
+    
     endGameArea: {
         marginTop: 20, 
         alignItems: 'center',
