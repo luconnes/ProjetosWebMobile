@@ -78,6 +78,15 @@ export default function Forca(): JSX.Element {
         ))}
       </View>
 
+      
+      <View style={styles.hangmanArea}>
+          
+          <Text style={{ fontSize: 32, color: 'gray' }}> 
+            [FORCA - {letrasErradas.length}/{maxErros}] 
+          </Text>
+      </View>
+
+      
       <Text style={styles.infoText}>
         Tentativas restantes: {maxErros - letrasErradas.length}
       </Text>
@@ -128,41 +137,42 @@ export default function Forca(): JSX.Element {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flex: 1, 
         alignItems: 'center',
-        padding: 20,
+        padding: 15, // Reduzido de 20 para 15
         backgroundColor: '#2a5298', 
     },
     title: {
-        fontSize: 28,
+        fontSize: 26, // Reduzido de 28 para 26
         fontWeight: 'bold',
-        marginBottom: 30,
+        marginBottom: 20, // Reduzido de 30 para 20
         color: '#fff', 
     },
     wordDisplay: {
         flexDirection: 'row',
-        marginBottom: 30,
+        marginBottom: 20,
         justifyContent: 'center',
+        flexWrap: 'wrap', // Permite que as letras quebrem a linha em palavras longas
     },
     letterSpace: {
-        fontSize: 36,
+        fontSize: 30, // Reduzido de 36 para 30
         fontWeight: 'bold',
-        marginHorizontal: 5,
+        marginHorizontal: 3, // Reduzido de 5 para 3
         borderBottomWidth: 3,
         borderColor: '#fff', 
-        paddingHorizontal: 5,
+        paddingHorizontal: 5, 
         color: '#fff', 
     },
     inputArea: {
         flexDirection: 'row',
         marginBottom: 20,
-        width: '90%',
+        width: '95%', // Aumentado para usar mais largura
         justifyContent: 'center',
         maxWidth: 400,
     },
     textInput: {
         borderWidth: 1,
-        borderColor: '#fff',
+        borderColor: '#ccc',
         padding: 10,
         marginRight: 10,
         flex: 1,
@@ -172,7 +182,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
     },
     infoText: {
-        fontSize: 18,
+        fontSize: 16, // Reduzido de 18 para 16
         marginBottom: 10,
         color: '#fff', 
         fontWeight: '600',
@@ -182,18 +192,28 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textDecorationLine: 'line-through',
     },
+    hangmanArea: {
+        height: 180, // Reduzido de 200 para 180
+        width: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 15, // Reduzido
+        marginTop: 10,
+        backgroundColor: '#4470b8', 
+        borderRadius: 10,
+    },
     endGameArea: {
-        marginTop: 30,
+        marginTop: 20, // Reduzido
         alignItems: 'center',
     },
     messageWin: {
-        fontSize: 24,
+        fontSize: 22, // Reduzido de 24 para 22
         color: '#ccffcc', 
         fontWeight: 'bold',
         marginBottom: 15,
     },
     messageLose: {
-        fontSize: 24,
+        fontSize: 22, // Reduzido de 24 para 22
         color: '#ffaaaa', 
         fontWeight: 'bold',
         marginBottom: 15,
@@ -201,14 +221,14 @@ const styles = StyleSheet.create({
     },
     button: {
         backgroundColor: '#58a0ff', 
-        paddingVertical: 12,
-        paddingHorizontal: 25,
+        paddingVertical: 10, // Reduzido
+        paddingHorizontal: 20, // Reduzido
         borderRadius: 8,
         marginTop: 10,
     },
     buttonText: {
         color: '#fff',
         fontWeight: 'bold',
-        fontSize: 18,
+        fontSize: 16, // Reduzido de 18 para 16
     }
 });
