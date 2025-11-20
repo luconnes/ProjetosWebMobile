@@ -139,25 +139,25 @@ const styles = StyleSheet.create({
     container: {
         flex: 1, 
         alignItems: 'center',
-        padding: 15, // Reduzido de 20 para 15
+        padding: 15, 
         backgroundColor: '#2a5298', 
     },
     title: {
-        fontSize: 26, // Reduzido de 28 para 26
+        fontSize: 26, 
         fontWeight: 'bold',
-        marginBottom: 20, // Reduzido de 30 para 20
+        marginBottom: 20, 
         color: '#fff', 
     },
     wordDisplay: {
         flexDirection: 'row',
         marginBottom: 20,
         justifyContent: 'center',
-        flexWrap: 'wrap', // Permite que as letras quebrem a linha em palavras longas
+        flexWrap: 'wrap', 
     },
     letterSpace: {
-        fontSize: 30, // Reduzido de 36 para 30
+        fontSize: 28, // Reduzido de 30 para 28
         fontWeight: 'bold',
-        marginHorizontal: 3, // Reduzido de 5 para 3
+        marginHorizontal: 2, // Reduzido de 3 para 2 (Ajuste crucial para largura)
         borderBottomWidth: 3,
         borderColor: '#fff', 
         paddingHorizontal: 5, 
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
     inputArea: {
         flexDirection: 'row',
         marginBottom: 20,
-        width: '95%', // Aumentado para usar mais largura
+        width: '95%', 
         justifyContent: 'center',
         maxWidth: 400,
     },
@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
     },
     infoText: {
-        fontSize: 16, // Reduzido de 18 para 16
+        fontSize: 16, 
         marginBottom: 10,
         color: '#fff', 
         fontWeight: '600',
@@ -193,27 +193,27 @@ const styles = StyleSheet.create({
         textDecorationLine: 'line-through',
     },
     hangmanArea: {
-        height: 180, // Reduzido de 200 para 180
+        height: 180, 
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: 15, // Reduzido
+        marginBottom: 15, 
         marginTop: 10,
         backgroundColor: '#4470b8', 
         borderRadius: 10,
     },
     endGameArea: {
-        marginTop: 20, // Reduzido
+        marginTop: 20, 
         alignItems: 'center',
     },
     messageWin: {
-        fontSize: 22, // Reduzido de 24 para 22
+        fontSize: 22, 
         color: '#ccffcc', 
         fontWeight: 'bold',
         marginBottom: 15,
     },
     messageLose: {
-        fontSize: 22, // Reduzido de 24 para 22
+        fontSize: 22, 
         color: '#ffaaaa', 
         fontWeight: 'bold',
         marginBottom: 15,
@@ -221,14 +221,14 @@ const styles = StyleSheet.create({
     },
     button: {
         backgroundColor: '#58a0ff', 
-        paddingVertical: 10, // Reduzido
-        paddingHorizontal: 20, // Reduzido
+        paddingVertical: 10, 
+        paddingHorizontal: 20, 
         borderRadius: 8,
         marginTop: 10,
     },
     buttonText: {
         color: '#fff',
         fontWeight: 'bold',
-        fontSize: 16, // Reduzido de 18 para 16
+        fontSize: 16, 
     }
 });
