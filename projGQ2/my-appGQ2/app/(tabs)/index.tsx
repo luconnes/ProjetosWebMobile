@@ -17,15 +17,15 @@ export default function HomeScreen() {
         Java, C, SQL e robótica inclusiva. Atualmente trainee no programa PUTS.
       </Text>
 
-      <Pressable style={styles.botao} onPress={() => Linking.openURL("https://wa.me/55SEUNUMERO")}>
+      <Pressable style={styles.botao} onPress={() => Linking.openURL("https://wa.me/5581998670498")}>
         <Text style={styles.textoBotao}>WhatsApp</Text>
       </Pressable>
 
-      <Pressable style={styles.botao} onPress={() => Linking.openURL("mailto:seuemail@gmail.com")}>
+      <Pressable style={styles.botao} onPress={() => Linking.openURL("mailto:lucasrdazevedo@gmail.com")}>
         <Text style={styles.textoBotao}>E-mail</Text>
       </Pressable>
 
-      <Pressable style={styles.botao} onPress={() => Linking.openURL("https://www.linkedin.com/in/SEULINK/")}>
+      <Pressable style={styles.botao} onPress={() => Linking.openURL("https://www.linkedin.com/in/lucas-azevedo-31a202291/")}>
         <Text style={styles.textoBotao}>LinkedIn</Text>
       </Pressable>
     </LinearGradient>
