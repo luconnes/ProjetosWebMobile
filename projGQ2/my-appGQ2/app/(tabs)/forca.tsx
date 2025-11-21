@@ -10,7 +10,7 @@ import {
 } from "react-native";
 
 // --- CONFIGURAÇÕES DO JOGO ---
-const palavras = ["banana", "uva", "manga", "abacaxi", "laranja"];
+const palavras = ["servidor", "café", "compilação", "janela", "algoritmo", "bicicleta", "firewall", "chuva", "vetor", "relógio", "nuvem", "areia", "encapsulamento", "mesa", "kernel", "cadeira", "depuração", "fruta", "banco de dados", "lâmpada", "protocolo", "estrada", "API", "música", "byte", "montanha", "processador", "jardim", "token", "caminho", "pacote", "sol", "renderização", "livro", "repositório", "bola", "memória", "flor", "shell", "monitor", "teclado", "oceano", "script", "planeta", "lata", "função", "sofá", "árvore", "ponte", "variável", "cão", "diretório", "classe", "gato", "energia", "conexão", "ônibus", "operador", "sapato", "loop", "folha", "método", "cidade", "router", "piscina", "link", "tijolo", "framework"];
 const MAX_ERROS = 6;
 
 // CORES AJUSTADAS
